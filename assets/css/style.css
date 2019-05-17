@@ -1,0 +1,24 @@
+body {
+    background-image: url("assets\images\light-grey-terrazzo.png") no-repeat center center fixed;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+}
+header {
+    background-color: rgb(35, 142, 71);
+    color: rgb(255, 255, 255);
+    position: absolute center;
+    text-align: center;
+    padding: 20px;
+}
+#instructions {
+    background-color: rgb(144, 177, 238);
+    font-size: 18px;
+    padding: 10px;
+}
+#randomNum {
+    background: orchid;
+    color: white;
+    font: 18px;
+    
+}

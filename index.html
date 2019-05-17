@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
+
+    <link rel="stylesheet" href="assets\css\style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
 </head>
 <body>
-  <header><h1>CrystalsCollector!</h1></header>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+    <header>
+    <h1>CrystalsCollector!</h1>
+    </header>
+    </div>
+  </div>
   <div id="instructions">
       <p>You will be given a random number at the start of the game.</p>
       <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -15,17 +27,20 @@
       <p>The value of each crystal is hidden from you until you click on it.</p>
       <p>Each time when the game starts, the game will change the values of each crystal.</p>
   </div>
-  <div id="randomNum"></div>
-  <div id="winsLosses"></div>
-  <div id="crystalImages">
-      <button id="crystal1"></button>
-      <button id="crystal2"></button>
-      <button id="crystal3"></button>
-      <button id="crystal4"></button>
+  <div class="row">
+    <div class="col-sm-3" id="randomNum">Target Number</div>
+    <div class="col-sm-3" id="winsLosses"></div>
+    <div class="col-sm-3" id="score">Your total score is:</div>
+    <div class="col-sm-3" id="totalScore"></div>
   </div>
-  <div id="score">Your total score is:</div>
-  <br>
-  <div id="totalScore"></div>
+  <div class="row" id="crystalImages">
+      <button class="col-sm-3" id="crystal1"></button>
+      <button class="col-sm-3" id="crystal2"></button>
+      <button class="col-sm-3" id="crystal3"></button>
+      <button class="col-sm-3" id="crystal4"></button>
+  </div>
+  
+  </div>
 
 
 </body>
