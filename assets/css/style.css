@@ -1,24 +1,37 @@
 body {
-    background-image: url("assets\images\light-grey-terrazzo.png") no-repeat center center fixed;
-    min-height: 100%;
+    background-image: url("../images/light-grey-terrazzo.png");
+    /* min-height: 100%;
     min-width: 100%;
-    display: block;
+    display: block; */
 }
 header {
-    background-color: rgb(35, 142, 71);
+    background-color: rgb(144, 177, 238);
     color: rgb(255, 255, 255);
     position: absolute center;
     text-align: center;
     padding: 20px;
 }
 #instructions {
-    background-color: rgb(144, 177, 238);
     font-size: 18px;
     padding: 10px;
+    font-weight: bold;
+    text-align: center;
 }
-#randomNum {
-    background: orchid;
+.gameDisplay {
+    background-color: rgb(144, 177, 238);
     color: white;
     font: 18px;
-    
+    font-weight: bold;
+    padding: 20px;
+}
+
+#crystalImages {
+    height: 100px;
+    width: 100px; 
+}
+#crystal1 {
+    float: left;
+}
+#crystal2 {
+    float: left;
 }
