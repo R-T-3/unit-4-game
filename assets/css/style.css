@@ -29,9 +29,10 @@ header {
     height: 100px;
     width: 100px; 
 }
-#crystal1 {
-    float: left;
-}
-#crystal2 {
-    float: left;
+#winsLosses {
+    background-color: rgb(144, 177, 238);
+    color: white;
+    font: 18px;
+    font-weight: bold;
+    padding: 20px;
 }

@@ -7,9 +7,9 @@
 // keep track of wins and losses
 // reset target number, score, and crystal values every game
 
-$(window).load(function() {
+$(document).ready(function() {
+  
   var targetNum = Math.floor((Math.random()* 120-19)+ 19);
-  console.log(targetNum);
   $("#targetNum").html(targetNum);
   
   var totalScore = 0;
@@ -20,67 +20,80 @@ $(window).load(function() {
   var crystal3 = Math.floor((Math.random() * 12 - 1)+ 1);
   var crystal4 = Math.floor((Math.random() * 12 - 1)+ 1);
   
-  var wins = 0;
-  $("#wins").html("Wins: " + wins);
+  var winsCounter = 0;
+  $("#wins").text("Wins:    " + winsCounter);
 
-  var losses = 0;
-  $("#losses").html("Losses: " + losses);
+  var lossCounter = 0;
+  $("#losses").text("Losses:    " + lossCounter);
 
   $("#crystal1").on("click", function() {
     totalScore += crystal1;
+    $("#totalScore").text(totalScore);
 
     if (totalScore === targetNum) {
-      wins++;
+      winsCounter++;
+      $("#wins").text("Wins:    " + winsCounter);
       resetGame();
     }
     else if (totalScore > targetNum) {
-      losses++;
+      lossCounter++;
+      $("#losses").text("Losses:    " + lossCounter);
       resetGame();
     }
   })
 
-  $("#crystal2").click(function() {
-    console.log("im working");
+  $("#crystal2").on("click", function() {
     totalScore += crystal2;
+    $("#totalScore").text(totalScore);
 
     if (totalScore === targetNum) {
-      wins++;
+      winsCounter++;
+      $("#wins").text("Wins:    " + winsCounter);
       resetGame();
     }
     else if (totalScore > targetNum) {
-      losses++;
+      lossCounter++;
+      $("#losses").text("Losses:    " + lossCounter);
       resetGame();
     }
   })
 
   $("#crystal3").on("click", function() {
     totalScore += crystal3;
+    $("#totalScore").text(totalScore);
 
     if (totalScore === targetNum) {
-      wins++;
+      winsCounter++;
+      $("#wins").text("Wins:    " + winsCounter);
       resetGame();
     }
     else if (totalScore > targetNum) {
-      losses++;
+      lossCounter++;
+      $("#losses").text("Losses:    " + lossCounter);
       resetGame();
     }
   })
 
   $("#crystal4").on("click", function() {
     totalScore += crystal4;
+    $("#totalScore").text(totalScore);
 
     if (totalScore === targetNum) {
-      wins++;
+      $("#wins").text("Wins:    " + winsCounter);
+      winsCounter++;
       resetGame();
     }
     else if (totalScore > targetNum) {
-      losses++;
+      lossCounter++;
+      $("#losses").text("Losses:    " + lossCounter);
       resetGame();
     }
   })
 
   function resetGame() {
+    console.log("yoyoyoyo");
     totalScore = 0;
+    $("#totalScore").text(totalScore);
     targetNum = Math.floor((Math.random() * 120 - 19)+ 19);
     crystal1 = Math.floor((Math.random() * 12 - 1)+ 1);
     crystal2 = Math.floor((Math.random() * 12 - 1)+ 1);
